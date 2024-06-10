@@ -21,7 +21,7 @@ class ViT_Simple(nn.Module):
 
         self.gelu = torch.nn.GELU()
         self.projection_E = nn.Linear(768,E)
-        self.projection_V = nn.Linear(E, len_vocab+1) # classes + blank token
+        self.projection_V = nn.Linear(E, len_vocab + 1) # classes + blank token
 
     def forward(self, x, targets=None, target_lengths=None):
 
@@ -66,7 +66,7 @@ class Mixer_ViT(nn.Module):
         self.dropout1 = nn.Dropout(0.5)
         self.dropout2 = nn.Dropout(0.5)
         self.projection_E = nn.Linear(577, E)
-        self.projection_V = nn.Linear(768, len_vocab+1) # classes + blank token
+        self.projection_V = nn.Linear(768, len_vocab + 1) # classes + blank token
 
     def forward(self, x, targets=None, target_lengths=None):
 
@@ -115,7 +115,7 @@ class Mixer_GELU_ViT(nn.Module):
         self.dropout1 = nn.Dropout(0.5)
         self.projection_E = nn.Linear(577, E)
         self.dropout2 = nn.Dropout(0.5)
-        self.projection_V = nn.Linear(768, len_vocab+1) # classes + blank token
+        self.projection_V = nn.Linear(768, len_vocab + 1) # classes + blank token
 
     def forward(self, x, targets=None, target_lengths=None):
         
