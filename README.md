@@ -1,4 +1,4 @@
-# Pretrained-Document-Recognition-Transformers
+# Mixer-ViT-Text-Recognition
 
 
 Official implementation of *'
